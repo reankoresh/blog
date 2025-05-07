@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory; // Importa el trait HasFactory
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $fillable=['name'];
+    use HasFactory; // Usa el trait HasFactory
+    protected $fillable = ['name'];
 
     public function posts()
     {

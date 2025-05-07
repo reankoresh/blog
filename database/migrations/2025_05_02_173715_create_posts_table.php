@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('image_path')->nullable();
             $table->text('excerpt');
-            $tatle->longText('content');
+            $table->longText('content');
             $table->boolean('is_published')->default(false);
             $table->timestamp('published_at')->nullable();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');

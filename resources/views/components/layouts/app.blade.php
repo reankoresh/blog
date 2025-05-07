@@ -29,6 +29,10 @@
                 :current="request()->routeIs('home')" wire:navigate>
                 {{ __('Home') }}
             </flux:navbar.item>
+            <flux:navbar.item icon="layout-grid" :href="route('admin.categories.index')"
+                :current="request()->routeIs('admin.categories.*')" wire:navigate>
+                {{ __('No home') }}
+            </flux:navbar.item>
         </flux:navbar>
 
         <flux:spacer />
